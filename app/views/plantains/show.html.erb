@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plantain.name %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @plantain.size %>
+</p>
+
+<p>
+  <strong>Admin:</strong>
+  <%= @plantain.admin %>
+</p>
+
+<p>
+  <strong>Expiry:</strong>
+  <%= @plantain.expiry %>
+</p>
+
+<%= link_to 'Edit', edit_plantain_path(@plantain) %> |
+<%= link_to 'Back', plantains_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  size: 
+  admin: false
+  expiry: 2017-11-10 09:17:06
+
+two:
+  name: MyString
+  size: 
+  admin: false
+  expiry: 2017-11-10 09:17:06

@@ -1,0 +1,25 @@
+<%= form_for(@peel) do |f| %>
+  <% if @peel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@peel.errors.count, "error") %> prohibited this peel from being saved:</h2>
+
+      <ul>
+      <% @peel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pieces %><br>
+    <%= f.number_field :pieces %>
+  </div>
+  <div class="field">
+    <%= f.label :references %><br>
+    <%= f.text_field :references %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

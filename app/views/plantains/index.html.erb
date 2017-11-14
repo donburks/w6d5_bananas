@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Plantains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Admin</th>
+      <th>Expiry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plantains.each do |plantain| %>
+      <tr>
+        <td><%= plantain.name %></td>
+        <td><%= plantain.size %></td>
+        <td><%= plantain.admin %></td>
+        <td><%= plantain.expiry %></td>
+        <td><%= link_to 'Show', plantain %></td>
+        <td><%= link_to 'Edit', edit_plantain_path(plantain) %></td>
+        <td><%= link_to 'Destroy', plantain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Plantain', new_plantain_path %>

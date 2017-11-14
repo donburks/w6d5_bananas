@@ -1,0 +1,33 @@
+<%= form_for(@plantain) do |f| %>
+  <% if @plantain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plantain.errors.count, "error") %> prohibited this plantain from being saved:</h2>
+
+      <ul>
+      <% @plantain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :admin %><br>
+    <%= f.check_box :admin %>
+  </div>
+  <div class="field">
+    <%= f.label :expiry %><br>
+    <%= f.datetime_select :expiry %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
